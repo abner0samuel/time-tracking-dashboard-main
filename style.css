@@ -1,0 +1,101 @@
+:root {
+    /* Colors
+ Primary */
+    --Blue: hsl(246, 80%, 60%);
+    --Light-red-work: hsl(15, 100%, 70%);
+    --Soft-blue-play: hsl(195, 74%, 62%);
+    --Light-red-study: hsl(348, 100%, 68%);
+    --Lime-green-exercise: hsl(145, 58%, 55%);
+    --Violet-social: hsl(264, 64%, 52%);
+    --Soft-orange-self-care: hsl(43, 84%, 65%);
+    /* Neutral */
+    --Very-dark-blue: hsl(226, 43%, 10%);
+    --Dark-blue: hsl(235, 46%, 20%);
+    --Desaturated-blue: hsl(235, 45%, 61%);
+    --Pale-Blue: hsl(236, 100%, 87%);
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 18px;
+}
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.container{
+    width: 1000px;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--Very-dark-blue);
+}
+.container > .first_div{
+    display: flex;
+    flex-direction: column;
+    width: 150px;
+    background-color: var(--Dark-blue);
+    grid-template-areas: 'main side-info''main statistics';
+    height: 380px;
+    grid-template-columns: 1,auto;
+    margin: 0.75rem;
+}
+.container > .first_div > .first_inner{
+    background-color: var(--Blue);
+}
+.container > .first_div > .first_inner img{
+    width: 50px;
+}
+.container > .second_div {
+    display: grid;
+    grid-gap: 0.75rem;
+    grid-template-columns: repeat(3,auto);
+}
+.container > .second_div > .inner_div{
+      width: 150px;
+      margin: 10px;
+      background-color: aqua;
+}
+.container > .second_div > .inner_div .nav{
+    font-size: 18px;
+    color: white;
+}
+.container > .second_div > .inner_div .svg {
+    width: 100%;
+    background-color: tr;
+    display: flex;
+    flex-direction: row-reverse;
+    /* height: 30px;
+    overflow: hidden; */
+    
+}
+.container > .second_div > .inner_div >.svg > path{
+    width: 100px;
+    height: 100px;
+}
+.inner_1_side,.inner_2_side,.inner_3_side,.inner_4_side,.inner_5_side,.inner_6_side{
+    /* position: absolute; */
+    z-index: 1;
+}
+.container > .second_div > .inner_1 .svg{
+    background-color: var(--Light-red-work);
+}
+.container > .second_div > .inner_2 .svg{
+        background-color: var(--Soft-blue-play);
+}
+.container > .second_div > .inner_3 .svg{
+    background-color: var(--Light-red-study);
+}
+.container > .second_div > .inner_4 .svg{
+    background-color: var(--Lime-green-exercise);
+}
+.container > .second_div > .inner_5 .svg{
+    background-color: var(--Desaturated-blue);
+}
+.container > .second_div > .inner_6 .svg{
+    background-color: var(--Soft-orange-self-care);
+}
